@@ -1,5 +1,5 @@
 import reactImg from "./assets/react-core-concepts.png";
-import componentsImg from "./assets/components.png";
+import { CORE_CONCEPTS } from "./data.js";
 
 const reactDescriptions = ["기본적인", "중요한", "핵심적인"];
 
@@ -37,13 +37,25 @@ function App() {
                     <h2>핵심 개념</h2>
                     <ul>
                         <CoreConcept
-                            title="Components"
-                            description="핵심 UI 구성 요소"
-                            img={componentsImg}
+                            title={CORE_CONCEPTS[0].title}
+                            description={CORE_CONCEPTS[0].description}
+                            img={CORE_CONCEPTS[0].image}
                         />
-                        <CoreConcept title="Props" />
-                        <CoreConcept />
-                        <CoreConcept />
+                        <CoreConcept
+                            title={CORE_CONCEPTS[1].title}
+                            description={CORE_CONCEPTS[1].description}
+                            img={CORE_CONCEPTS[1].image}
+                        />
+                        <CoreConcept
+                            title={CORE_CONCEPTS[2].title}
+                            description={CORE_CONCEPTS[2].description}
+                            img={CORE_CONCEPTS[2].image}
+                        />
+                        <CoreConcept
+                            title={CORE_CONCEPTS[3].title}
+                            description={CORE_CONCEPTS[3].description}
+                            img={CORE_CONCEPTS[3].image}
+                        />
                     </ul>
                 </section>
             </main>
