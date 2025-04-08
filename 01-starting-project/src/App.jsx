@@ -1,4 +1,6 @@
 import reactImg from "./assets/react-core-concepts.png";
+import componentsImg from "./assets/components.png";
+
 const reactDescriptions = ["기본적인", "중요한", "핵심적인"];
 
 function genRandomInt(max) {
@@ -16,12 +18,34 @@ function Header() {
     );
 }
 
+function CoreConcept(props) {
+    return (
+        <li>
+            <img src={props.img} alt={props.title} />
+            <h3>{props.title}</h3>
+            <p>{props.description}</p>
+        </li>
+    );
+}
+
 function App() {
     return (
         <div>
-            <Header></Header>
+            <Header />
             <main>
-                <h2>시작하기!</h2>
+                <section id="core-concepts">
+                    <h2>핵심 개념</h2>
+                    <ul>
+                        <CoreConcept
+                            title="Components"
+                            description="핵심 UI 구성 요소"
+                            img={componentsImg}
+                        />
+                        <CoreConcept title="Props" />
+                        <CoreConcept />
+                        <CoreConcept />
+                    </ul>
+                </section>
             </main>
         </div>
     );
