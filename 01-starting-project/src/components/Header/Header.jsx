@@ -1,4 +1,5 @@
-import reactImg from "../assets/react-core-concepts.png";
+import reactImg from "../../assets/react-core-concepts.png";
+import "./Header.css";
 
 const reactDescriptions = ["기본적인", "중요한", "핵심적인"];
 
