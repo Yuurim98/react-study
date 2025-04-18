@@ -1,7 +1,10 @@
 export default function TapButton(props) {
+    function handleClick() {
+        console.log("클릭");
+    }
     return (
         <li>
-            <button>{props.children}</button>
+            <button onClick={handleClick}>{props.children}</button>
         </li>
     );
 }
