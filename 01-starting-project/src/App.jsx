@@ -4,8 +4,8 @@ import CoreConcept from "./components/CoreConcept.jsx";
 import TapButton from "./components/TapButton.jsx";
 
 function App() {
-    function handleSelect() {
-        console.log("클릭");
+    function handleSelect(selectedButton) {
+        console.log(selectedButton + "클릭");
     }
 
     return (
@@ -24,12 +24,18 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TapButton onSelect={handleSelect}>
+                        <TapButton onSelect={() => handleSelect("components")}>
                             Components
                         </TapButton>
-                        <TapButton onSelect={handleSelect}>JSX</TapButton>
-                        <TapButton onSelect={handleSelect}>Props</TapButton>
-                        <TapButton onSelect={handleSelect}>State</TapButton>
+                        <TapButton onSelect={() => handleSelect("jsx")}>
+                            JSX
+                        </TapButton>
+                        <TapButton onSelect={() => handleSelect("props")}>
+                            Props
+                        </TapButton>
+                        <TapButton onSelect={() => handleSelect("state")}>
+                            State
+                        </TapButton>
                     </menu>
                 </section>
             </main>
