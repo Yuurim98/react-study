@@ -44,8 +44,8 @@ function App() {
                             State
                         </TapButton>
                     </menu>
-                    {!selectedTopic ? <p>주제를 선택하세요.</p> : null}
-                    {selectedTopic ? (
+                    {!selectedTopic && <p>주제를 선택하세요.</p>}
+                    {selectedTopic && (
                         <div id="tab-content">
                             <h3>{EXAMPLES[selectedTopic].title}</h3>
                             <p>{EXAMPLES[selectedTopic].description}</p>
@@ -53,7 +53,7 @@ function App() {
                                 <code>{EXAMPLES[selectedTopic].code}</code>
                             </pre>
                         </div>
-                    ) : null}
+                    )}
                 </section>
             </main>
         </div>
